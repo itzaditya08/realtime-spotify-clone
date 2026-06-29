@@ -29,7 +29,7 @@ initializeSocket(httpServer);
 
 app.use(
     cors({
-        origin: ["https://spotiplay-app.vercel.app/", "http://localhost:3000"],
+        origin: ["https://spotiplay-app.vercel.app", "http://localhost:3000"],
         credentials: true,
     })
 );
