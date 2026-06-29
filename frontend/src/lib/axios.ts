@@ -13,8 +13,9 @@ export const initializeAxiosWithClerk = (clerk: Clerk) => {
 };
 
 export const axiosInstance = axios.create({
-    baseURL: import.meta.env.MODE === "development" ? "http://localhost:5001/api" : "/api",
-    withCredentials: true, // Crucial for sending cookies with cross-origin requests, which Clerk might rely on
+	baseURL: import.meta.env.MODE === "development" 
+		? "http://localhost:5001/api" 
+		: "https://spotiplay-backend.onrender.com/api", 
 });
 
 // Add a request interceptor to axiosInstance
